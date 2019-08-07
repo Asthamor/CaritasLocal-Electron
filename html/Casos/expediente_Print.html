@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Expediente</title>
+  <link rel="stylesheet" href="../../css/expedientePrint.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../../css/main.css" />
+  <script>
+    window.$ = window.jQuery = require('jquery');
+  </script>
+  <script src="../../js/expedientePrint.js" defer></script>
+
+</head>
+
+<body>
+
+
+
+  <div class="row mt-3 mb-3">
+    <div class="container-fluid">
+
+
+      <section class="content" id="formatToPrint">
+        <div class="container-fluid">
+          <div class="row clearfix">
+            <div class="card">
+              <div class="body">
+
+                <div class="box box-grays box-solid">
+                  <div class="box-header with-border">
+                    <div class="login-logo text-center"><img src="../../img/Logo.png"></div>
+                  </div>
+                  <div class="box-header with-border">
+                    <h3 class="box-title text-center"> Cáritas de Xalapa A.C. - Compartamos nuestros bienes</h3>
+                  </div>
+                  <div class="box-body text-center"> Apoyo a Beneficiados 1.0 - Expediente Personal </div>
+                </div>
+                <br>
+
+                <!-- Comienza caja -->
+                <div class="box box-grays box-solid" id="DatosPersonales">
+                  <div class="box-header with-border">
+                    <h4 class="box-title"> Datos Personales </h4>
+                  </div>
+                  <br>
+                  <div class="box-body text-center">
+                    <div class="row">
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4 ">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Nombre</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="nombre"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Apellido Paterno</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="paterno"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Apellido Materno</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="materno"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4 ">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Sexo</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="sexo"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Fecha de Nacimiento</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="nacimiento"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Edad</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="edad"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4 ">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">CURP</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="curp"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">IFE</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="ife"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Comienza caja -->
+                      <div class="col-md-4 col-sm-4">
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">RFC</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="rfc"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comienza caja -->
+                <div class="box box-grays box-solid" id="Direcciones">
+                  <div class="box-header with-border">
+                    <h4 class="box-title"> Dirección(es) </h4>
+                  </div>
+                  <br>
+                  <div class="box-body text-center">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12">
+                        <!-- Comienza caja -->
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Dirección</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div id="direccion"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comienza caja -->
+                <div class="box box-grays box-solid" id="Contactos">
+                  <div class="box-header with-border">
+                    <h4 class="box-title"> Contacto(s) </h4>
+                  </div>
+                  <br>
+                  <div class="box-body text-center">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12">
+                        <!-- Comienza caja -->
+                        <div class="box box-grays-l box-solid">
+                          <div class="box-header-min with-border">
+                            <h3 class="box-title">Contacto</h3>
+                          </div>
+                          <div class="box-body text-center">
+                            <div class="row">
+                              <!-- Comienza caja -->
+                              <div class="col-md-4 col-sm-4 ">
+                                <div class="box box-grays-l box-solid">
+                                  <div class="box-header-min with-border">
+                                    <h3 class="box-title">Teléfono</h3>
+                                  </div>
+                                  <div class="box-body text-center">
+                                    <div id="telefono"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Comienza caja -->
+                              <div class="col-md-4 col-sm-4">
+                                <div class="box box-grays-l box-solid">
+                                  <div class="box-header-min with-border">
+                                    <h3 class="box-title">Celular</h3>
+                                  </div>
+                                  <div class="box-body text-center">
+                                    <div id="celular"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Comienza caja -->
+                              <div class="col-md-4 col-sm-4">
+                                <div class="box box-grays-l box-solid">
+                                  <div class="box-header-min with-border">
+                                    <h3 class="box-title">Correo Electronico</h3>
+                                  </div>
+                                  <div class="box-body text-center">
+                                    <div id="email"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Comienza caja -->
+                  <div class="box box-grays box-solid" id="Familiares">
+                    <div class="box-header with-border">
+                      <h4 class="box-title"> Datos Familiares </h4>
+                    </div>
+                    <br>
+                    <div class="box-body text-center">
+
+                      <div id="familiar"></div>
+
+                      <div class="row">
+                        <!-- Comienza caja -->
+                        <div class="col-md-9 col-sm-9 ">
+                          <div class="box box-grays-l box-solid">
+                            <div class="box-header-min with-border">
+                              <h3 class="box-title">Ingresos Familiares Totales</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 ">
+                          <div class="box-body text-center">
+                            <div id="IngresoTotal"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Comienza caja -->
+                  <div id="Expedientes">
+                    <div class="box box-grays box-solid">
+                      <div class="box-header with-border">
+                        <h4 class="box-title"> Información Complementaria </h4>
+                      </div>
+                      <br>
+                      <div class="box-body text-center">
+                        <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Atención Médica</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="AsistenciaMedica">No se cuenta con antención médica permanente, ocacinalmente
+                                  asiste al
+                                  centro de salud de su localidad para recibir atención.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Estado Civil</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="EstadoCivil">Soltero(a)</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Ocupación</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="Ocupacion">Estudiante</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Ingresos Mensuales</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="IngresosMensuales">$ 1,000</div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+
+                        <div class="row">
+                          <!-- Comienza caja -->
+                          <div class="col-md-9 col-sm-9 ">
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Ingresos Totales</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3 ">
+                            <div class="box-body text-center">
+                              <div id="IngresosTotales"></div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+
+                    <!-- Comienza caja -->
+                    <div class="box box-grays box-solid">
+                      <div class="box-header with-border">
+                        <h4 class="box-title"> Datos de Vivienda </h4>
+                      </div>
+                      <br>
+                      <div class="box-body text-center">
+
+                        <div class="row">
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Techo</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="Techo">Firme</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Paredes</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="Pared">Concreto</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Posesión</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="Posesion">Propia</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Piso</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="Piso">4</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">No. Cuartos</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="noCuartos">4</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Paga Renta</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="pagaRenta">Sí</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Cantidad</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="pagoRenta">$ 1,500</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Visita Domiciliar</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="visitaDomiciliar">No</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3 col-sm-3">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">¿Porqué?</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="descripcionVisita">No es necesario realizar la visita</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-9 col-sm-12">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Observaciones</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="observacionesVisita">La vivienda es de un familiar pero le paga una cantidad
+                                  por
+                                  estar
+                                  ahí.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Comienza caja -->
+                    <div class="box box-grays box-solid">
+                      <div class="box-header with-border">
+                        <h4 class="box-title"> Datos de Referencia </h4>
+                      </div>
+                      <br>
+                      <div class="box-body text-center">
+                        <div class="row">
+                          <!-- Comienza caja -->
+                          <div class="col-md-9 col-sm-9 ">
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">El informante y/o gestor del expediente es el mismo BENEFICIARIO:
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-3 ">
+                            <div class="box-body text-center">
+                              <div id="informante">No</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">¿Cómo supo de Cáritas?</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="tipoMedio">Familiar</div>
+                                <div id="nombreMedio">Familiar</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Nombre</h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="nombreInformante">Grecia Isabel López</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Teléfono Referencia </h3>
+                              </div>
+                              <div class="box-body text-center">
+                                <div id="telefonoInformante">2288159043</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-header-min with-border">
+                                <h3 class="box-title">Anteriormente el beneficiario ya habia recibido apoyo de Cáritas
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-body text-center">
+                                <div id="ayudaAnterior">Sí</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <!-- Comienza caja -->
+                            <div class="box box-grays-l box-solid">
+                              <div class="box-body text-center">
+                                <div id="descripcionAyuda">Se ayudo con el pago de un medicamneto que no se encontraba
+                                  en
+                                  la
+                                  farmacia.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="box box-grays box-solid" id="Situacion">
+                      <div class="box-header with-border">
+                        <h4 class="box-title"> Situaciones </h4>
+                      </div>
+                      <br>
+                      <div class="box-body text-center">
+                        <div id="situacionB"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <button type="button" name="" id="btnPrint" class="btn bg-red btn-block btn-danger">
+      <i class="material-icons">
+        print
+      </i>
+      Imprimir</button>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+<section class="animated fadeInUp">
+    <div class="container-fluid" id="Paso2">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header" id="GenerarExpedienteHeader">
+                        <h2> 2<small>Generar un expediente nuevo</small></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="header bg-cyan">
+                        <h2><i class="material-icons">view_list</i>
+                            <span class="icon-name">EXPEDIENTE NUEVO</span>
+                            <small>Registro un nuevo expediente.</small>
+                        </h2>
+                        <ul class="header-dropdown m-r-0"></ul>
+                    </div>
+                    
+                    <!-- Información Completa del Ciudadano  -->
+                    <div class="body">
+
+                        <h2 class="card-inside-title">Datos del Beneficiado
+                            <small>Información general del beneficiado.</small>
+                        </h2>
+                        <div class="row clearfix">
+                            <div class="col-md-12">
+                                <div class="form-group form-float">
+                                    <div class="control-group">
+                                        <select class="codPersona" id="listCiudadano" placeholder="Buscar ciudadano"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="InformacionCompleta">
+                            <!-- Información Datos Personales  -->
+                            <div class="row clearfix">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="card" id="DatosPersonales">
+                                        <div class="header bg-cyan">Datos Personales</div>
+                                        <div class="body">
+                                            <div class="row clearfix">
+                                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                    <div id="InfoPersonal">
+                                                        <label for="nombrePersona">NOMBRE:</label><span id="nombrePersona"></span><br />
+                                                        <label for="direccionPersona">DIRECCIÓN:</label><span id="direccionPersona"></span><br />
+                                                        <label for="contactoPersona">CONTACTO:</label><span id="contactoPersona"></span><br />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                    <a class="ModUser" href="#">
+                                                        <div class="info-box-4 hover-expand-effect">
+                                                            <div class="icon"><i class="material-icons">accessibility_new</i></div>
+                                                            <div class="content">
+                                                                <div class="text">Modificar</div>
+                                                                <div class="number">Información</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <hr/>
+
+                        <!-- Información Datos de Familiares  -->
+                            <!-- Formulario para agregar Familiares-->
+                            <form id="FormFamiliares">
+                                <h2 class="card-inside-title">Datos Familiares
+                                    <small>Familiares que viven actualmente con el BENEFICIARIO.</small>
+                                </h2>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <div class="form-line" id="menuInput">
+                                                <select class="form-control show-tick" placeholder="Parentesco" data-live-search="true" data-container="body" name="listParentesco" id="listParentesco" required>
+                                                    <option value="" disabled selected hidden>Parentesco</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="nombreFamiliar" pattern="\w+" name="nombreFamiliar" placeholder="Nombre Completo" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="number" class="form-control" id="edadFamiliar" pattern="\d+" placeholder="Edad" name="edadFamiliar" min="1" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="ocupacionFamiliar" placeholder="Ocupación" name="ocupacionFamiliar" maxlength="80" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <div class="form-line" id="menuInput">
+                                                <select class="form-control show-tick" data-live-search="true" placeholder="Escolaridad" data-container="body" name="listEscolaridad" id="listEscolaridad" required>
+                                                    <option value="" disabled selected hidden>Escolaridad</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="number" class="form-control" placeholder="Ingresos Mensuales" pattern="\d+" id="ingresosFamiliares" name="ingresosFamiliares" min="0" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <input type="checkbox" name="ingresosFijos" id="ingresosFijos" class="filled-in chk-col-red" checked/>
+                                            <label for="ingresosFijos">Ingresos Fijos</label>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-9">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="observacionFamiliar" placeholder="Observación General" name="observacionFamiliar" maxlength="150" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <button type="submit" id="AddFamily" class="btn btn-primary waves-effect btn-block ">
+                                                <i class="material-icons">note_add</i> Agregar Familiar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        
+                            <!-- Tabla de Familiares registrados-->
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table id="TablaFamilia" class="table table-bordered table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Parentesco</th>
+                                                    <th>Nombre</th>
+                                                    <th>Edad</th>
+                                                    <th>Ocupación</th>
+                                                    <th>Ingresos</th>
+                                                    <th>Observación</th>
+                                                    <th>Acciones</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ingresos Familiares -->
+                            <div class="row clearfix">
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>Ingresos Familiares Mensuales <span id="Totales" class="label label-info"></span>
+                                    </h4>
+                                    <input type="hidden" id="total" name="total">
+                                </div>
+                            </div>
+
+                            <hr/>
+                            <!-- Datos Personales-->
+                            <h2 class="card-inside-title">Datos Personales
+                                <small>Información Complementaria.</small>
+                            </h2>
+
+                            <!-- Inicia formulario de expediente -->
+                            <form method="POST" name="FormExpediente" id="FormExpediente" action="Apoyos/Data/AccionesExpedientes.php">
+                                <input type="hidden" name="metodo" id="metodo" value="guardarExpediente">
+                                <input type="hidden" name="idCiudadano" id="idCiudadano">
+
+                                <div class="row clearfix">
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <textarea id="Amedica" name="Amedica" rows="4" class="form-control no-resize" placeholder="Describa a detalle si cuenta o no con atención
+                                                    médica." autofocus required></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <select class="form-control show-tick" data-live-search="true" data-container="body" data-dropupAuto="false" name="listEstadoCivil" id="listEstadoCivil" required>
+                                                    <option value="" disabled selected hidden>Estado Civil
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="ocupacion" name="ocupacion" placeholder="Ocupación Actual" maxlength="80" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="number" class="form-control" id="ingresos" placeholder="Ingresos Mensuales" name="ingresos" min="0" maxlength="15" onchange="sumaIngresos()" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-8">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h3>Ingresos Totales Mensuales <span id="TotalTotal" class="label label-info"></span></h3>
+                                    </div>
+                                </div>
+
+                                <!-- Información Datos de la vivienda  -->
+                                <h2 class="card-inside-title">Datos Vivienda
+                                    <small>Datos de la vivienda que ocuapa el BENEFICIARIO.</small>
+                                </h2>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <select class="form-control show-tick" data-live-search="true" data-container="body" name="listTecho" id="listTecho" required>
+                                                    <option value="" disabled selected hidden>Techo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <select class="form-control show-tick" data-live-search="true" data-container="body" name="listPared" id="listPared" required>
+                                                    <option value="" disabled selected hidden>Pared</option>                                            
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <select class="form-control show-tick" data-live-search="true" data-container="body" name="listPosesion" id="listPosesion" required>
+                                                    <option value="" disabled selected hidden>Posesión</option>                                            
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <select class="form-control show-tick" data-live-search="true" data-container="body" name="listPiso" id="listPiso" required>
+                                                <option value="" disabled selected hidden>Piso</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="number" class="form-control" id="cuartos" name="cuartos" placeholder="No. de cuartos" min="1" max="50" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-2">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Paga Renta</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="radio" id="PagaRentaSI" value="SI" name="PagaRenta" class="filled-in chk-col-red" checked />
+                                        <label for="PagaRentaSI">Sí</label>
+                                        <input type="radio" id="PagaRentaNO" value="NO" name="PagaRenta" class="filled-in chk-col-red" />
+                                        <label for="PagaRentaNO">NO</label>
+                                        <div class="form-group form-float" id="cuantoRenta">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" placeholder="¿Cuánto por mes?" id="PagaRentaCuanto" name="PagaRentaCuanto" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Visita domiciliar</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="radio" id="VisitaSI" value="SI" name="Visita" class="filled-in chk-col-red" checked />
+                                        <label for="VisitaSI">Sí</label>
+                                        <input type="radio" id="VisitaNO" value="NO" name="Visita" class="filled-in chk-col-red" />
+                                        <label for="VisitaNO">NO</label>
+                                        <div class="form-group form-float" id="visitaPorque">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="visitaDetalle" placeholder="¿Por qué?" name="visitaDetalle" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" placeholder="Observaciones vivienda" id="obervacionesvivienda" name="obervacionesvivienda" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Información Datos de referencia -->
+                                <h2 class="card-inside-title">Datos de Referencia
+                                    <small>Datos de referencia del BENEFICIARIO hacia CÁRITAS.</small>
+                                </h2>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-8">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">El informante y/o gestor del expediente es el
+                                                mismo BENEFICIARIO:</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" id="informanteSI" value="SI" name="informante" class="filled-in chk-col-red" />
+                                        <label for="informanteSI">Sí</label>
+                                        <input type="radio" id="informanteNO" value="NO" name="informante" class="filled-in chk-col-red" checked />
+                                        <label for="informanteNO">NO</label>
+                                    </div>
+                                </div>
+                                <div class="row clearfix" id="muestraInformante">
+                                    <div class="col-md-8">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" placeholder="Nombre del Informante" id="nombreInformante" name="nombreInformante" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="telefonoInformante" placeholder="Teléfono del informante" name="telefonoInformante" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <select class="form-control show-tick" data-live-search="true" data-container="body" name="listMedio" id="listMedio" required>
+                                                <option value="" disabled selected hidden>¿Por qué medio se enteró de los apoyos?</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" placeholder="Especifique cómo se enteró" id="nombreMedio" name="nombreMedio" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Anteriormente el beneficiario ya habia recibido
+                                                apoyo de Cáritas
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="radio" id="ayudaAnteriorSI" value="SI" name="ayudaAnterior" class="filled-in chk-col-red" checked />
+                                        <label for="ayudaAnteriorSI">Sí</label>
+                                        <input type="radio" id="ayudaAnteriorNO" value="NO" name="ayudaAnterior" class="filled-in chk-col-red" />
+                                        <label for="ayudaAnteriorNO">NO</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group form-float" id="muestraAyuda">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="descripcionAyuda" placeholder="Describa la ayuda" name="descripcionAyuda" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Gaurdar Expediente -->
+                                <div class="row clearfix">
+                                    <div class="col-sm-4 col-sm-offset-6">
+                                        <input id="btnGuardarExpediente" type="submit" value="Guardar Expediente" class="btn btn-primary btn-block waves-effect"/>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="reset" class="btn btn-danger btn-block waves-effect" value="Cancelar" onclick="hiden();"/>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

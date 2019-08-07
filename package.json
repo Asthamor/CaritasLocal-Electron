@@ -1,0 +1,80 @@
+{
+    "name": "caritas-electron",
+    "version": "1.0.0",
+    "description": "",
+    "build": {
+        "appId": "com.electron.kopodc.asthamor.caritas-electron",
+        "mac": {
+            "category": "com.electron.kopodc.asthamor.caritas-electron"
+        },
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64",
+                        "ia32"
+                    ]
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "deb"
+            ]
+        },
+        "productName": "Cáritas - Apoyo a beneficiarios",
+        "copyright": "Copyright © year ${author}",
+        "directories": {
+            "buildResources": "build"
+        }
+    },
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "rebuild": "electron-rebuild -f -w sqlite3",
+        "postinstall": "install-app-deps",
+        "test": "mocha --full-trace --inspect",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "maintainer": "@Asthamor",
+    "email": "mauricio.torres.osorio@gmail.com",
+    "keywords": [],
+    "author": "Mauricio Torres - @Asthamor <mauricio.torres.osorio@gmail.com> https://github.com/Asthamor ",
+    "license": "ISC",
+    "dependencies": {
+        "bookshelf": "^0.15.1",
+        "bootstrap": "^3.4.1",
+        "bootstrap-material-datetimepicker": "^2.7.3",
+        "bootstrap-validator": "^0.11.9",
+        "datatables.net-bs": "^1.10.19",
+        "datatables.net-responsive-bs": "^2.2.3",
+        "jquery": "^3.4.1",
+        "knex": "^0.18.1",
+        "microplugin": "0.0.3",
+        "moment": "^2.24.0",
+        "popper.js": "^1.15.0",
+        "router": "^1.3.3",
+        "selectize": "^0.12.6",
+        "selectize.js": "^0.12.12",
+        "sequelize": "^5.9.0",
+        "sifter": "^0.5.3",
+        "sqlite3": "^4.0.9",
+        "sweetalert2": "^8.13.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-dom": "^1.8.1",
+        "electron": "^5.0.6",
+        "electron-builder": "^20.44.4",
+        "electron-chromedriver": "^5.0.1",
+        "electron-packager": "^14.0.0",
+        "electron-rebuild": "^1.8.5",
+        "less-loader": "^5.0.0",
+        "mocha": "^6.1.4",
+        "spectron": "^7.0.0",
+        "tar": "^4.4.10"
+    }
+}

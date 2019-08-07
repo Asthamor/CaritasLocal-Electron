@@ -1,0 +1,244 @@
+<section class="animated fadeInUp">
+    <div class="container-fluid" id="Paso1">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header" id="DivNuevoCiudadano">
+                        <h2> 1 Registrar nuevos ciudadanos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header bg-green">
+                        <h2><i class="material-icons">face</i>
+                            <span class="icon-name">NUEVO CIUDADANO</span>
+                            <small>Registro de nuevos ciudadanos.</small>
+                        </h2>
+                        <ul class="header-dropdown m-r-0"></ul>
+                    </div>
+                    <form name="FormNuevoCiudadano" id="FormNuevoCiudadano" data-toggle="validator">
+                        <div class="body">
+                            <h2 class="card-inside-title">Datos Personales</h2>
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre" data-error="Requerido" required>
+
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Apellido Paterno" id="paterno" name="paterno" data-error="Requerido" required>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Apellido Materno" id="materno" name="materno" data-error="Requerido" required>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <select class="form-control show-tick" data-live-search="true" placeholder="Sexo" data-error="Elige una opción" data-container="body" name="listSexo" id="listSexo" required>
+                                                <option value="" disabled selected hidden>Sexo</option>
+                                                <option value="M">Masculino</option>
+                                                <option value="F">Femenino</option>
+                                            </select>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line cssfechaNacimiento">
+                                            <input type="text" placeholder="Fecha de Nacimiento" class="form-control datepicker" data-error="Especifica la fecha de nacimiento" id="fechaNacimiento" name="fechaNacimiento">
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line cssedad">
+                                            <input type="number" min="0" class="form-control" id="edad" name="edad" placeholder="Edad - Años" disabled required>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line" id="menuInput">
+                                            <input type="text" class="form-control" placeholder="CURP" id="curp" name="curp" minlength="18" maxlength="18" data-error="Escriba los 18 dígitos del CURP">
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="INE" id="ine" name="ine" minlength="13" maxlength="13" data-error="Escriba los 13 digitos del INE">
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="rfc" placeholder="RFC" name="rfc" minlength="12" maxlength="13" data-error="Escriba los 12 o 13 dígitos del RFC" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h2 class="card-inside-title">Dirección</h2>
+
+
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="calle" placeholder="Calle" name="calle" data-error="Especifice la calle" required>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Número" id="no" name="no" data-error="Especifica el número" required>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="colonia" name="colonia" placeholder="Colonia" data-error="Especifica la colonia" required>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <select class="form-control show-tick" data-live-search="true" data-container="body" data-dropupauto="false" data-error="Elige una opción de la lista" name="listEstado" id="listEstado" required>
+                                                <option value="" disabled selected hidden>Estado</option>
+                                            </select>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <select class="form-control show-tick" data-live-search="true" data-container="body" data-dropupauto="false" data-error="Elige una opción de la lista" name="listMunicipio" id="listMunicipio" required>
+                                                <option value="" disabled selected hidden>Municipio</option>
+                                            </select>
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Código Postal" pattern="^[0-9]{4,}$" data-error="Especifica el código postal" id="cp" name="cp">
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h2 class="card-inside-title">Contacto</h2>
+
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Teléfono" id="telefono" pattern="^[0-9]{7,}$" data-error="Especifica el número de teléfono a 7 o 10 dígitos" name="telefono" minlength="7">
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="celular" placeholder="Celular" pattern="^[0-9]{10}$" data-error="Especifica el número de celular a 10 dígitos" name="celular" minlength="10">
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="email" class="form-control" id="correo" placeholder="Correo" data-error="El e-mail proporcionado no es válido" name="correo">
+
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Gaurdar Ciudadano -->
+
+                            <div class="row clearfix">
+                                <div class="col-sm-6"></div>
+                                <div class="col-sm-6">
+                                    <div class="col-sm-6 col-xs-6">
+                                        <input type="submit" id="btnGuardarCiudadano" value="Guardar Ciudadano" class="btn bg-green btn-block waves-effect" />
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        <button id="btnCancelarCiudadano" type="button" class="btn btn-danger btn-block waves-effect">Cancelar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

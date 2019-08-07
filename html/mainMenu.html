@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cáritas - Apoyo a Beneficiarios </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script>
+        require('popper.js');
+    </script>
+    <script>
+        require('bootstrap');
+    </script>
+
+    <!-- Select Plugin Js -->
+    <script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="../plugins/bootstrap-select/js/ajax-bootstrap-select.min.js"></script>
+    <!-- Slimscroll Plugin Js -->
+    <script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="../plugins/node-waves/waves.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="../plugins/jquery-countto/jquery.countTo.js"></script>
+    <!-- Morris Plugin Js -->
+    <script src="../plugins/raphael/raphael.min.js"></script>
+    <script src="../plugins/morrisjs/morris.js"></script>
+    <!-- ChartJs -->
+    <script src="../plugins/chartjs/Chart.bundle.js"></script>
+    <!-- Flot Charts Plugin Js-->
+    <script src="../plugins/flot-charts/jquery.flot.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="../plugins/flot-charts/jquery.flot.time.js"></script>
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="../plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="../plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+    <script src="../plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+    <script src="../plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script src="../plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+    <script src="../plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+    <script src="../plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+    <script src="../plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+    <script src="../plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+    <!-- Moment Plugin Js -->
+    <script src="../plugins/momentjs/moment.js"></script>
+    <script src="../plugins/momentjs/moment-with-locales.min.js"></script>
+    <!-- Bootstrap Material Datetime Picker Css -->
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="../plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="../plugins/sweetalert2/sweetalert2.js"></script>
+    <!-- Select2 -->
+    <script src="../plugins/select2/select2.full.min.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <!-- Font Awesome Icons -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="../css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Wait Me Css -->
+    <link href="../plugins/waitme/waitMe.css" rel="stylesheet" />
+    <!-- Bootstrap Select Css -->
+    <link href="../plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../plugins/bootstrap-select/css/ajax-bootstrap-select.min.css" rel="stylesheet" />
+    <!-- Morris Chart Css-->
+    <link href="../plugins/morrisjs/morris.css" rel="stylesheet" />
+    <!-- Sweetalert Css -->
+    <link href="../plugins/sweetalert2/sweetalert2.css" rel="stylesheet" />
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../plugins/select2/select2.min.css">
+    <!-- Custom Css -->
+    <link href="../css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="../plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+        rel="stylesheet" />
+    <link href="../css/selectize.css" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/Responsive-2.2.2/css/responsive.dataTables.min.css">
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="../plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <script src="../plugins/Responsive-2.2.2/js/dataTables.responsive.min.js" defer></script>
+    <script src="../plugins/datatablesfindRow/fnFindCellsRowIndex.js" async defer>
+    </script>
+
+    <script src="../js/funciones.js"></script>
+    <script src="../js/menu_actions.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/nuevo_ciudadano.js"></script>
+    <script src="../js/generar_expediente.js"></script>
+    <script src="../js/generar_situacion.js"></script>
+    <script src="../js/gestion_ciudadanos.js"></script>
+    <script src="../js/seguimiento.js"></script>
+    <script>
+        require('bootstrap-validator');
+    </script>
+
+</head>
+
+<body class="theme-red">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse" aria-expanded="false"></a>
+                        <a href="javascript:void(0);" class="bars"></a>
+                        <a class="navbar-brand">Apoyo a Beneficiarios 1.0</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <!-- Call Search -->
+                            <li><a href="javascript:void(0);" class="js-search" data-close="true"><i
+                                        class="material-icons">search</i></a></li>
+                            <!-- #END# Call Search -->
+                            <li><a href="javascript:void(0);"><i class="material-icons" id="plusBtn">zoom_in</i></a>
+                            </li>
+                            <li><a href="javascript:void(0);"><i class="material-icons"
+                                        id="minusBtn">zoom_out_map</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div class="row">
+            <!-- #Top Bar -->
+            <section class="col-md-2 col-lg-2 col-xs-2 sidemenu" id="side-nav">
+                <!-- Left Sidebar -->
+                <aside id="leftsidebar" class="sidebar">
+                    <!-- User Info -->
+                    <img src="../img/inicio.png" class="user-img" />
+                    <!-- #User Info -->
+                    <!-- Menu -->
+                    <div class="menu">
+                        <ul class="list">
+                            <li class="header">Navegación</li>
+                            <li class="menu-section">
+                                <a class="waves-effect waves-block" href="javascript:void(0);">
+                                    <i class="material-icons"> markunread_mailbox </i> <span>Apoyos</span>
+                                </a>
+                            </li>
+
+                            <li class="inner-menu">
+                                <a onclick="load_casos();" class="waves-effect clickable">
+                                    <i class="material-icons">perm_phone_msg</i><span>Iniciar Caso</span></a>
+                            </li>
+                            <li class="inner-menu">
+                                <a onclick="load_informes();" class="waves-effect clickable">
+                                    <i class="material-icons"> cloud_download </i><span>Informes</span></a>
+                            </li>
+                            <li class="menu-section">
+                                <a class="waves-effect">
+                                    <i class="material-icons"> face </i> <span>Ciudadanos</span>
+                                </a>
+                            </li>
+                            <li class="inner-menu">
+                                <a onclick="load_gestion_ciudadanos();" class="waves-effect clickable">
+                                    <i class="material-icons"> account_circle </i><span>Gestión de Ciudadanos</span></a>
+                            </li>
+                            <li class="inner-menu">
+                                <a class=" waves-effect clickable">
+                                    <i class="material-icons"> photo_camera </i><span>Fotografia</span></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- #Menu -->
+                    <!-- Footer -->
+                    <div class="legal">
+                        <div class="copyright">
+                            &copy; 2018 By LagatosCorp.Net
+                        </div>
+                        <div class="version">
+                            <b>Version: </b> 1.0.0
+                        </div>
+                    </div>
+                    <!-- #Footer -->
+                </aside>
+
+                <div class="modal fade" id="ModalDescarga" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="smallModalLabel">
+                                    <i class="material-icons">done_all</i> Respaldo terminado</h4>
+                            </div>
+                            <div class="modal-body">
+                                <a href="Administracion/Data/backup.sql" download="Administracion/Data/backup.sql"> Haz
+                                    click
+                                    aqu&iacute;</a> <span>para descargar tu respaldo.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="col-md-10 col-lg-10 col-xs-10 no-padding-nor-margin">
+                <div class="main-container">
+                    <div id="main-section">
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+
+
+    </div>
+    <!-- Top Bar -->
+
+
+</body>
+
+</html>

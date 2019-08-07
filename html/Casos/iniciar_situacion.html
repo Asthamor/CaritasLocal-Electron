@@ -1,0 +1,312 @@
+<section class="animated fadeInUp">
+    <div class="container-fluid" id="Paso3">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header" id="FormIniciarCaso">
+                        <h2> 3
+                            <small>Registrar nuevas solicitudes</small>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header bg-light-blue">
+                        <h2><i class="material-icons">view_list</i>
+                            <span class="icon-name">INICIAR SITUACI&Oacute;N</span>
+                            <small>Registro de nuevas situaciones.</small>
+                        </h2>
+                        <ul class="header-dropdown m-r-0"></ul>
+                    </div>
+                    <div class="body">
+
+                        <h2 class="card-inside-title">Datos del Beneficiado
+                            <small>Información general del beneficiado.</small>
+                        </h2>
+                        <div class="row clearfix">
+                            <div class="col-md-12">
+                                <div class="form-group form-float">
+                                    <div class="form-line" id="menuInput">
+                                        <div class="control-group">
+                                            <select class="codPersona" id="listCiudadanoSituacion"
+                                                placeholder="Buscar ciudadano" name="listCiudadanoExpediente"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="InformacionCompletaExpediente">
+
+                            <div class="row clearfix">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                    <div class="card">
+                                        <div class="header bg-light-blue">Datos Personales y Expediente</div>
+                                        <div class="body">
+                                            <div class="row clearfix">
+
+
+                                                <div id="DatosPersonalesExpediente">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                        <div class="row">
+                                                            <label for="datosPersonalesNombre">NOMBRE:</label>
+                                                            <span id="datosPersonalesNombre"
+                                                                name="datosPersonalesNombre"></span>
+                                                        </div>
+                                                        <div class="row">
+                                                            <label for="datosPersonalesDireccion">DIRECCION:</label>
+                                                            <span id="datosPersonalesDireccion"
+                                                                name="datosPersonalesDireccion"></span>
+                                                        </div>
+                                                        <div class="row">
+                                                            <label for="datosPersonalesContacto">CONTACTO:</label>
+                                                            <span id="datosPersonalesContacto"
+                                                                name="datosPersonalesContacto"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                        <div class="row">
+                                                            <label for="datosPersonalesFamiliares">FAMILIARES:</label>
+                                                            <span id="datosPersonalesFamiliares"
+                                                                name="datosPersonalesFamiliares"></span>
+                                                        </div>
+                                                        <div class="row">
+                                                            <label for="datosPersonalesIngresos">INGRESOS:</label>
+                                                            <span id="datosPersonalesIngresos"
+                                                                name="datosPersonalesIngresos"></span>
+                                                        </div>
+                                                        <div class="row">
+                                                            <label for="datosPersonalesVivienda">VIVIENDA:</label>
+                                                            <span id="datosPersonalesVivienda"
+                                                                name="datosPersonalesVivienda"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                        <a class="ModUserExp" id="printExpedienteA" href=""
+                                                            target="_blank">
+                                                            <div class="info-box-4 hover-expand-effect">
+                                                                <div class="icon"><i
+                                                                        class="material-icons">folder_shared</i></div>
+                                                                <div class="content">
+                                                                    <div class="text">Ver</div>
+                                                                    <div class="number">Expediente</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-4">
+                                    <button id="btnFolioCaso" class="btn bg-light-blue btn-block waves-effect">
+                                        <i class="material-icons">verified_user</i> Generar Folio</button>
+                                </div>
+                            </div>
+
+                            <div id="ApoyoDetalles">
+
+                                <h2 class="card-inside-title">Informacion de la Situaci&oacute;n
+                                    <small>Información general de la situaci&oacute;n.</small>
+                                </h2>
+                                <br>
+                                <div class="row clearfix">
+                                    <div class="col-md-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <textarea id="DescripcionCaso" name="DescripcionCaso" rows="4"
+                                                    class="form-control no-resize"
+                                                    placeholder="Describa a detalle de la situaci&oacute;n por el cual acude a C&aacute;ritas ..."
+                                                    required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2 class="card-inside-title">Listado de Apoyos
+                                    <small>Registrar apoyos que pudieran ser otorgados.</small>
+                                </h2>
+                                <br>
+                                <form method="POST" name="FormNuevoApoyo" id="FormNuevoApoyo">
+                                    <input type="hidden" name="metodo" id="metodo" value="save">
+                                    <input type="hidden" name="idCaso" id="idCaso">
+                                    <div class="row clearfix">
+                                        <div class="col-md-3">
+                                            <div class="form-group form-float">
+                                                <div class="form-line" id="menuInput">
+                                                    <select class="form-control show-tick" data-live-search="true"
+                                                        data-container="body" name="listTipoApoyo" id="listTipoApoyo"
+                                                        required>
+                                                        <option value="" disabled selected hidden>
+                                                            Tipo de apoyo
+                                                        </option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input type="text" class="datepicker form-control"
+                                                        placeholder="Fecha Inicial" id="FechaInicio" name="FechaInicio"
+                                                        required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input type="text" class="datepicker form-control"
+                                                        placeholder="Fecha Final" id="FechaFinal" name="FechaFinal"
+                                                        required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <p class="align-center"><b>Perido: </b><span id="periodoFecha">0</span></p>
+                                        </div>
+
+                                        <input type="hidden" id="periodoFechaInput" value="">
+                                    </div>
+
+                                    <div class="row clearfix">
+                                        <div class="col-md-4">
+                                            <div class="form-group form-float">
+                                                <div class="form-line" id="menuInput">
+                                                    <select class="form-control show-tick" data-live-search="true"
+                                                        data-container="body" name="listFrecuencia" id="listFrecuencia"
+                                                        required>
+                                                        <option value="" disabled selected hidden>
+                                                            Frecuencia
+                                                        </option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group form-float">
+                                                <div class="form-line" id="menuInput">
+                                                    <input type="text" class="form-control" id="DescripcionApoyo"
+                                                        name="DescripcionApoyo"
+                                                        placeholder="Describa brevemente el apoyo a otorgar" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row clearfix">
+                                        <div class="col-md-4">
+                                            <div class="form-group form-float">
+                                                <div class="form-line" id="menuInput">
+                                                    <select class="form-control show-tick" data-live-search="true"
+                                                        data-container="body" name="listTipoRespuesta"
+                                                        id="listTipoRespuesta" required>
+                                                        <option value="" disabled selected hidden>
+                                                            Tipo de respuesta
+                                                        </option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group form-float">
+                                                <label class="form-label">El apoyo se otrogo en el momento</label>
+                                                <input type="radio" id="entregadoSI" value="SI" name="entregado"
+                                                    class="filled-in chk-col-red" checked />
+                                                <label for="entregadoSI">Sí - Entregado</label>
+                                                <input type="radio" id="entregadoNO" value="NO" name="entregado"
+                                                    class="filled-in chk-col-red" />
+                                                <label for="entregadoNO">No - En Gestión</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group form-float">
+                                                <label class="form-label">El apoyo es URGENTE</label>
+                                                <input type="radio" id="urgenteSI" value="SI" name="urgente"
+                                                    class="filled-in chk-col-red" checked />
+                                                <label for="urgenteSI">Sí</label>
+                                                <input type="radio" id="urgenteNO" value="NO" name="urgente"
+                                                    class="filled-in chk-col-red" />
+                                                <label for="urgenteNO">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row clearfix">
+                                        <div class="col-md-8"></div>
+                                        <div class="col-md-4">
+                                            <button id="btnMasApoyos" type="submit"
+                                                class="btn bg-light-blue btn-block waves-effect">
+                                                <i class="material-icons">playlist_add_check</i> Agregar Apoyo</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table id="TablaApoyos"
+                                                class="table table-bordered table-striped table-hover dataTable dt-responsive responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Folio</th>
+                                                        <th>Tipo de Apoyo</th>
+                                                        <th>Frecuencia</th>
+                                                        <th>Tiempo</th>
+                                                        <th>Descripción</th>
+                                                        <th>Estatus</th>
+                                                        <th>Eliminar</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Gaurdar Caso -->
+                                <div class="row clearfix">
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-4 col-xs-10">
+                                        <button id="btnGuardarSituacion"
+                                            class="btn bg-light-blue btn-block waves-effect">Guardar
+                                            Situaci&oacute;n</button>
+                                    </div>
+                                    <div class="col-sm-2 col-xs-2">
+                                        <button type="button" class="btn btn-danger waves-effect"
+                                            id="btnCancelarSituacion">Cancelar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

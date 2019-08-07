@@ -1,0 +1,162 @@
+<section>
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-md-12 ">
+
+                <div class="card">
+                    <div class="header bg-green">
+                        <h2><i class="material-icons">face</i>
+                            <span class="icon-name">GESTIÓN DE CIUDADANOS</span>
+                            <small>Administración de Ciudadanos.</small>
+                        </h2>
+                    </div>
+                    <div class="body table-responsive">
+
+                        <div id="NuevaDireccion" hidden>
+
+                            <h2 class="card-inside-title">Nueva Direcci&oacute;n para <span id="nombreCiudadano"></span></h2>
+                            <form method="POST" name="FormNuevaDireccion" id="FormNuevaDireccion" action="Padron/Data/GestionCiudadanos.php">
+                                <input type="hidden" id="metodo" name="metodo" value="agregarCiudadano">
+                                <input type="hidden" id="codigoCiudadano" name="codigoCiudadano">
+                                <div class="row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control clean" id="calle" name="calle" required>
+                                                <label class="form-label">Calle</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control clean" id="no" name="no" required>
+                                                <label class="form-label">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control clean" id="colonia" name="colonia" required>
+                                                <label class="form-label">Colonia</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line" id="menuInput">
+                                                <select class="form-control show-tick" data-live-search="true" data-container="body" data-dropupAuto="false" name="listEstado2" id="listEstado2" required>
+                          <option value="">Estado</option>
+                        </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line" id="menuInput">
+                                                <select class="form-control show-tick" data-live-search="true" data-container="body" data-dropupAuto="false" name="listMunicipio2" id="listMunicipio2" required>
+                          <option value="">Municipio</option>
+                        </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control clean" id="cp" name="cp">
+                                                <label class="form-label">CP</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button type="button" class="btn btn-block btn-xs bg-red waves-effect" onclick="cancelar()">
+                      <i class="material-icons">cancel</i></button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group form-float">
+                                            <button type="button" class="btn btn-block btn-xs btn-primary waves-effect" id="guardarDireccion">
+                        <i class="material-icons">not_listed_location</i> Agregar</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                            <hr>
+                        </div>
+
+                        <div id="NuevoContacto" hidden>
+                            <h2 class="card-inside-title">Nuevo Contacto para <span id="nombreCiudadanoC"></span></h2>
+                            <form method="POST" name="FormNuevoContacto" id="FormNuevoContacto" action="Padron/Data/GestionCiudadanos.php">
+                                <input type="hidden" id="idCiudadanoC" name="idCiudadanoC">
+                                <input type="hidden" id="metodo" name="metodo" value="agregarContacto">
+                                <div class="row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="number" class="form-control clean" id="telefono" name="telefono">
+                                                <label class="form-label">Tel&eacute;fono</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="number" class="form-control clean" id="celular" name="celular">
+                                                <label class="form-label">Celular</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control clean" id="correo" name="correo">
+                                                <label class="form-label">Correo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-md-6">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-block btn-xs bg-red waves-effect" onclick="cancelar()">
+                      <i class="material-icons">cancel</i></button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group form-float">
+                                            <button type="button" class="btn btn-block btn-xs btn-primary waves-effect" id="agregarContacto">
+                        <i class="material-icons">call</i> Agregar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                        </div>
+
+                        <table id="TablaCiudadano" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>NO</th>
+                                    <th>C&Oacute;DIGO</th>
+                                    <th>NOMBRE</th>
+                                    <th>DIRECCI&Oacute;N</th>
+                                    <th>CONTACTO</th>
+                                    <th>ESTATUS</th>
+                                    <th>ACCIONES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

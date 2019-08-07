@@ -1,0 +1,125 @@
+<section id="divInicio">
+    <div class="container-fluid">
+        <div class="row" id="case-menu">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box-3 bg-green hvr-grow-shadow" id="NuevoCiudadano">
+                    <div class="icon"><i class="material-icons">face</i></div>
+                    <div class="content card-content">
+                        <div class="text">Ciudadano</div>
+                        <div class="number">Nuevo</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h2> 1<small>Registrar nuevos ciudadanos</small></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box-3 bg-cyan hvr-grow-shadow" id="GenerarExpediente">
+                    <div class="icon"><i class="material-icons">folder_shared</i></div>
+                    <div class="content card-content">
+                        <div class="text">Generar</div>
+                        <div class="number">Expediente</div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h2> 2<small>Generar Expediente</small></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box-3 bg-light-blue hvr-grow-shadow" id="IniciarCaso">
+                    <div class="icon"><i class="material-icons">perm_phone_msg</i></div>
+                    <div class="content card-content">
+                        <div class="text">Iniciar</div>
+                        <div class="number">Situaci&oacute;n</div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h2> 3<small>Registro de nuevas solicitudes</small></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box-3 bg-indigo hvr-grow-shadow" id="DarSeguimiento">
+                    <div class="icon"><i class="material-icons">record_voice_over</i></div>
+                    <div class="content card-content">
+                        <div class="text">Dar</div>
+                        <div class="number">Seguimiento</div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h2> 4<small>Seguimiento de un caso</small></h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="inner-section">
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ***************** FIN MODAL ****************-->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">¿Se entregó el apoyo al ciudadano?</h4>
+                <form method="POST" name="FormModal" id="FormModal" action="Apoyos/Data/AccionesSituacion.php">
+                    <input type="hidden" id="metodo" name="metodo" value="updateApoyo">
+                    <input type="hidden" id="idApoyoModal" name="idApoyoModal">
+                </form>
+            </div>
+            <div class="modal-body">
+                <div class="col-8 form-group form-float">
+                    <input type="radio" id="SiEntregado" value="SI" name="entregado" class="filled-in chk-col-red" checked="">
+                    <label for="SiEntregado">Si se entregó</label>
+                    <input type="radio" id="NoEntregado" value="NO" name="entregado" class="filled-in chk-col-red">
+                    <label for="NoEntregado">No se entregó</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Observación:</label>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control" id="observacionModal" name="observacionModal" rows="3"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <label for="fechaModal">Fecha:</label>
+                    <input type="date" class="form-control" id="fechaModal" name="fechaModal">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="guardarModal">Guardar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="cancelarSeguimiento">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***************** FIN MODAL ****************-->

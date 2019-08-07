@@ -1,0 +1,330 @@
+.fondo {
+    background: url("../img/Fondo.jpg");
+    /*background: #1E90FF;*/
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+@font-face {
+    src: url('../fonts/Material-Icons.woff2');
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.info-box-3 {
+    height: 200px;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(112, 112, 112, 1);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(112, 112, 112, 1);
+    box-shadow: 10px 10px 15px 0px rgba(112, 112, 112, 1);
+    z-index: 9;
+    cursor: pointer;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+    min-width: 60px;
+}
+
+.theme-red .navbar {
+    background-color: #1E90FF !important;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
+
+.textoBlanco {
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px blue;
+    font-size: 1.5em;
+}
+
+.menu li:not(.inner-menu) a {
+    cursor: default;
+}
+
+.menu .inner-menu {
+    padding-left: 5%;
+}
+
+.theme-red .navbar {
+    background-color: #1E90FF !important;
+}
+
+.sidebar .user-info {
+    background: url(../img/inicio.png) no-repeat !important;
+}
+
+.btn-circle i {
+    font-size: 14px !important;
+    position: relative !important;
+    margin-top: 6px !important;
+    margin-left: 3px !important;
+}
+
+.btn-circle {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.login-logo img {
+    max-width: 100%;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-content {
+    min-height: 50px;
+    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+#inner-section .content {
+    margin-top: 10px;
+    padding-top: 0px;
+}
+
+.sidebar {
+    width: auto;
+    position: relative;
+    top: 0;
+}
+
+.sidebar .user-img {
+    height: auto;
+    max-width: 120%;
+    height: auto;
+}
+
+.navbar {
+    z-index: 10;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.sidemenu {
+    padding: 0px;
+}
+
+.no-padding-nor-margin {
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-container {
+    display: flex;
+    overflow: hidden;
+    height: 90vh;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+
+#main-section {
+    overflow: auto;
+    height: auto;
+    backface-visibility: hidden;
+    will-change: overflow;
+    padding-top: 10px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    width: 100%;
+}
+
+.menu-section {
+    background-color: rgba(105, 117, 129, 0.548);
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+div .animated {
+    animation-duration: 1.5s;
+    animation-delay: .4s;
+}
+
+.clickable:hover {
+    background-color: rgba(30, 143, 255, 0.623);
+}
+
+.ls-closed #side-nav {
+    display: none;
+}
+
+.ls-closed.overlay-open #side-nav {
+    display: inline-block;
+}
+
+.ls-closed .no-padding-nor-margin {
+    width: 100%;
+}
+
+.ls-closed.overlay-open .no-padding-nor-margin {
+    width: auto;
+}
+
+@media (max-width: 640px) {
+
+    li a span,
+    .inner-menu a span {
+        display: none;
+    }
+
+    .sidebar .user-img {
+        display: none;
+    }
+
+    .list .header {
+        display: none;
+    }
+
+    .info-box-3 {
+        max-height: 50px;
+    }
+
+    .info-box-3 .card-content {
+        max-height: 30px;
+    }
+
+    .info-box-3 .icon {
+        padding: 0px;
+    }
+
+    #case-menu .card {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .info-box-3 {
+        max-height: 50px;
+    }
+
+    #case-menu .card {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .info-box-3 {
+        max-height: 80px;
+        height: 80px;
+    }
+}
+
+#InformacionCompletaExpediente,
+#InformacionCompleta {
+    display: none;
+}
+
+#btnGuardarCiudadano,
+#btnCancelarCiudadano {
+    height: 40px;
+}
+
+.dataTables_wrapper {
+    width: 100%;
+}
+
+#TablaApoyos {
+    width: 100% !important;
+}
+
+#TablaSeguimiento {
+    width: 100% !important;
+}
+
+.btn-tbl {
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    padding-right: 15px;
+    min-width: 80px !important;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn-tbl span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-tbl span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+    font-size: 25px;
+}
+
+
+.btn-tbl:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.table-bordered tbody tr td {
+    padding: 4px !important;
+}
+
+.swal2-icon {
+    width: 5em !important;
+    height: 5em !important;
+    border-width: .25em !important;
+    font-size: 20px !important;
+}
+
+.swal2-popup {
+    font-size: 1.3rem !important;
+}
+
+.swal2-content {
+    font-size: 1.5rem !important;
+    margin: 25px;
+}
+
+.swal2-container {
+    margin: 25px;
+}
